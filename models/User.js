@@ -1,4 +1,4 @@
-const { extendSchemaImpl } = require('graphql/utilities/extendSchema')
+
 const {Schema, model} = require('mongoose')
 
 const userSchema = new Schema({
@@ -26,6 +26,6 @@ const userSchema = new Schema({
 }, {
     timestamps: true,
     versionKey: false,
-})
+});
 
-model.exports = model("User", userSchema);
+module.exports = model("User", userSchema);
