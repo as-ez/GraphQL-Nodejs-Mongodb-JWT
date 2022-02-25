@@ -46,8 +46,6 @@ const login = {
             email: user.email
         })
 
-        console.log(user)
-
         return token
     }
 
