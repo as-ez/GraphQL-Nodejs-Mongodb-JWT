@@ -25,5 +25,13 @@ const posts = {
     description: 'Get all posts',
     resolve: () =>  Post.find()
 }
+const post = {
+    type: PostType,
+    description: 'Get a post by id',
+    args: {
+        id: { type: GraphQLID }
+    },
+    resolve: (_, {id}) => Post.findById(id)
+}
 
-module.exports = { users, user, posts };
+module.exports = { users, user, posts, post };
