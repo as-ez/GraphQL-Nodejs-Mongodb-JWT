@@ -25,6 +25,7 @@ const posts = {
     description: 'Get all posts',
     resolve: () =>  Post.find()
 }
+
 const post = {
     type: PostType,
     description: 'Get a post by id',
